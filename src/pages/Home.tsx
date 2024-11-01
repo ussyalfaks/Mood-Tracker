@@ -33,7 +33,7 @@ export function Home() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <p className='m-5 font-semibold md:text-xl text-lg capitalize font-serif text-[#629878]'>Welcome {user?.name}</p>
+      <p className='m-5 font-semibold md:text-xl text-lg capitalize font-serif text-[#629878]'>Welcome Back {user?.name}</p>
       <div className="bg-white rounded-xl shadow-sm p-6 md:p-8">
         <h1 className="text-3xl font-bold text-gray-900 text-center mb-8">
           How are you feeling today?

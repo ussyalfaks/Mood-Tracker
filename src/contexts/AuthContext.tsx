@@ -40,7 +40,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const logout = async () => {
     await api.logout();
     setUser(null);
-    navigate('/login');
+    navigate('/Dashboard');
   };
 
   return (

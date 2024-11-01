@@ -5,6 +5,7 @@ import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Stats } from './pages/Stats';
 import { Profile } from './pages/Profile';
+import { Dashboard } from '../src/pages/Dashboard'
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import { useAuth } from './contexts/AuthContext';
@@ -25,14 +26,14 @@ function PrivateRoute({ children }: { children: React.ReactNode }) {
 
   if (loading || !delayComplete) {
     return (
-      <div className="loader-wrapper flex justify-center items-center">
-        <span className="loader">ll</span>
+      <div className="loader-wrapper flex justify-center items-center bg-orange-50">
+        <span className="loader"></span>
       </div>
     );
   }
     
   if (!user) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/Dashboard" />;
   }
 
   return <Layout>{children}</Layout>;
@@ -43,6 +44,7 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
+          <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/"  element={
