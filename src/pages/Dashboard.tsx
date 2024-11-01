@@ -43,9 +43,11 @@ export function Dashboard ()  {
             </p>
             
             <div className="flex flex-row gap-4 justify-center md:justify-start">
+              <Link to="/register">
               <button className="bg-[#629878] text-white px-8 py-3 rounded-3xl font-medium transition-colors duration-200">
                 Get Started
               </button>
+              </Link>
               <button className="border-2 border-[#629878] text-[#629878] px-8 py-3 rounded-3xl font-medium hover:bg-orange-50 transition-colors duration-200">
                 Learn More
               </button>
