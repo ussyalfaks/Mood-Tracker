@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../../public/Logo.png'
 import Emotional from '../../public/emotional.png'
+import { EarthLock, Award } from 'lucide-react'
 
 export function Dashboard ()  {
 
@@ -12,14 +13,14 @@ export function Dashboard ()  {
    <div className='flex justify-between items-center bg-[#629878]'>
    <Link to="/" className="flex  items-center px-2 py-2 text-gray-900">
       <img src={Logo} className='w-12 h-12' alt="" />
-      <span className="text-xl font-semibold text-[#fff5DC]">MoodMate</span>
+      <span className="text-xl font-semibold text-[#fff5DC] capitalize">MoodTracker</span>
     </Link> 
     
-    <div className="flex space-x-4 2">
+    {/* <div className="flex space-x-4 2">
         <NavLink to="/" label="Article" />
         <NavLink to="/" label="About" /> 
         <NavLink to="/" label="Licenses" />
-    </div>
+    </div> */}
 
     <div>
       <Link to="/register">
@@ -32,7 +33,7 @@ export function Dashboard ()  {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 pb-4 pt-10 md:py-12">
           <div className="flex-1 space-y-6">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-wide text-center md:text-left text-gray-900">
+            <h1 className="font-serif text-4xl md:text-4xl lg:text-6xl font-semibold leading-tight tracking-wide text-center md:text-left text-gray-700">
               Track and Improve
               <span className="block mt-2">Your Emotional</span>
               <span className="block mt-2">Well-being</span>
@@ -65,8 +66,34 @@ export function Dashboard ()  {
           </div>
         </div>
       </div>
+    </div>
+
+    <div className='flex justify-center items-center mx-7 py-10 px-5'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 '>
+      <div className='flex justify-center items-center flex-col border-2 border-[#629878] p-4 rounded-2xl'>
+        <EarthLock size={50} className='text-[#629878]'/>
+        <h1 className=' font-semibold  text-xl py-3'>End-to-end Encryption</h1>
+        <p className='text-center font-serif font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, nam dolores. Nemo illum cumque at ea nobis sunt voluptatibus.
+        </p>
+      </div>
+
+      <div className='flex justify-center items-center flex-col border-2 border-[#629878] p-4 rounded-2xl'>
+        <Award size={50} className='text-[#629878]'/>
+        <h1 className=' font-semibold  text-xl py-3'>Verified by Expert</h1>
+        <p className='text-center font-serif font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, nam dolores. Nemo illum cumque at ea nobis sunt voluptatibus.
+        </p>
+      </div>
+
+      <div className='flex justify-center items-center flex-col border-2 border-[#629878] p-4 rounded-2xl'>
+        <EarthLock size={50} className='text-[#629878]'/>
+        <h1 className=' font-semibold  text-xl py-3'>header text</h1>
+        <p className='text-center font-serif font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, nam dolores. Nemo illum cumque at ea nobis sunt voluptatibus.
+        </p>
+      </div>
+      </div>
       
     </div>
+
     </div>
   )
 }
@@ -82,7 +109,7 @@ function NavLink({ to,  label }: { to: string;  label: string }) {
       className={`flex items-center py-1 px-2 my-2 rounded-full text-sm font-medium ${
         isActive
           ? 'text-[#629878] bg-[#fff5DC]'
-          : 'text-[#fff5DC] hover:text-white'
+          : 'text-[#fff5DC] hover:text-white hover:border-r-2 hover:border-l-2'
       }`}
     >
      

@@ -4,6 +4,7 @@
 
  body{
   background-color:#FFF7ED ; 
+  overflow-x: hidden;
  }
 
 .loader-wrapper {

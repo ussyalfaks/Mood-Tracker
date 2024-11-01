@@ -21,8 +21,8 @@ export function Register() {
 
   return (
     <div className="min-h-screen bg-[#fff5DC] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-48 h-48 bg-[#629878] opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#629878] opacity-10 rounded-full translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-0 left-0 w-48 h-48 bg-[#629878] opacity-10  rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#629878] opacity-10  rounded-full translate-x-1/2 translate-y-1/2"></div>
 
       <div className="max-w-md w-full bg-white shadow-2xl rounded-2xl overflow-hidden">
         <div className="p-8 space-y-8">
